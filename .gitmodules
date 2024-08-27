@@ -1,0 +1,3 @@
+[submodule "matotes-csharp/themes/hugo-theme-techdoc"]
+	path = matotes-csharp/themes/hugo-theme-techdoc
+	url = https://github.com/thingsym/hugo-theme-techdoc.git

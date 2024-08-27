@@ -1,0 +1,21 @@
+baseURL = 'https://example.org/'
+languageCode = 'sv-se'
+title = 'Mathias C#-skola'
+theme = 'hugo-theme-techdoc'
+
+[params]
+
+    description = "guide för nybörjaren inom C#"
+    github_repository = "https://github.com/matotes/csharp-undervisning"
+    version = "0.0.1"
+
+    menu_style = "open-menu"
+
+    menu_exclusion = [
+        "archives",
+        "archive",
+        "blog",
+        "entry",
+        "post",
+        "posts",
+    ]
