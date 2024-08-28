@@ -126,3 +126,36 @@ public string Inspect()
 }
 ```
 Detta är tre olika metoder som bilen har, och man kan köra. De kan använda sig av attributen men behöver inte göra det. Likt attributen har också metoderna en synlighet, `public` innebär att alla kan komma åt och köra metoderna.
+
+### Skapa ett objekt av en typ
+När man har skapat definitionen av ett objekt, och samtliga attribut och egenskaper så kan man skapa en **instans** av typen. Det är då ett "fysiskt" objekt som man kan fylla på med information eller köra metoderna. I ens kod skapar man ett objekt på följande vis.
+```csharp
+Car vehicle = new Car();
+```
+Som när man skapar en variabel av exempelvis `string`, `int` eller `double` så skriver man alltid enligt syntax <span style="color:#007ACC">datatyp</span> <span style="color:#9CDCFE">variabelnamn</span>;
+
+På samma vis när man har skapat sin egen typ gör man som med alla andra typer av variabler man skapar.
+
+## Kom åt attributen av en typ
+När man har skapat ett objekt så kan man också komma åt attributen av typen. Det gör man genom att använda sin variabel som är av typen. 
+```csharp
+Car vehicle = new Car();
+
+vehicle.make = "Volvo";
+vehicle.model = "XC90";
+vehicle.productionYear = new DateTime(2024);
+```
+Nu skapas en variabel av den egenskapade typen `Car`. Denna typen har då alla attributen, vi kan komma åt dem och assignera dem. Så fort vi skickar vidare denna variabel så kommer alla attributen med. Samma gäller egenskaperna som finns i typen.
+```csharp
+Car vehicle = new Car();
+
+vehicle.make = "Volvo";
+vehicle.model = "XC90";
+vehicle.productionYear = new DateTime(2024);
+
+vehicle.Start();
+vehicle.Stop();
+
+Console.WriteLine(vehicle.Inspect());
+```
+Förväntad utdata kan du se i bilden nedan.
