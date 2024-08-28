@@ -143,7 +143,7 @@ Car vehicle = new Car();
 
 vehicle.make = "Volvo";
 vehicle.model = "XC90";
-vehicle.productionYear = new DateTime(2024);
+vehicle.productionYear = new DateTime(2024, 1, 1);
 ```
 Nu skapas en variabel av den egenskapade typen `Car`. Denna typen har då alla attributen, vi kan komma åt dem och assignera dem. Så fort vi skickar vidare denna variabel så kommer alla attributen med. Samma gäller egenskaperna som finns i typen.
 ```csharp
@@ -151,7 +151,7 @@ Car vehicle = new Car();
 
 vehicle.make = "Volvo";
 vehicle.model = "XC90";
-vehicle.productionYear = new DateTime(2024);
+vehicle.productionYear = new DateTime(2024, 1, 1);
 
 vehicle.Start();
 vehicle.Stop();
