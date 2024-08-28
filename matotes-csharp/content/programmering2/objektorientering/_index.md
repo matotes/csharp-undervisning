@@ -2,7 +2,7 @@
 title: "Objektorientering"
 date: 2024-08-27T23:26:15Z
 draft: false
-weight: 50
+weight: 1
 ---
 
 ## Paradigmer
