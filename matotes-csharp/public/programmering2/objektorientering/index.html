@@ -20,22 +20,25 @@
 <meta property="og:url" content="http://localhost:1313/programmering2/objektorientering/">
   <meta property="og:site_name" content="Mathias C#-skola">
   <meta property="og:title" content="Objektorientering">
-  <meta property="og:description" content="The document hierarchy is unlimited. It also means that the menu levels is unlimited levels.
-The menu levels has up to 5 levels of indentation. After that there is no indentation.">
+  <meta property="og:description" content="Paradigmer Olika programmeringsspråk erbjuder olika lösningar för problem man kan stöta på som utvecklare. Dessa olika lösningar kallas för “programmeringsparadigmer”, man kan med lite annan formulering kalla det för programmeringsmetoder.
+Man tänker alltså på ett systematiskt vis omkring all sin programkod ungefär på samma vis. C# fokuserar på en typ av paradigm; Objektorientering.
+Andra möjliga varianter finns, och de har alla olika fördelar och nackdelar. Olika språk har olika stark koppling till dessa.">
   <meta property="og:locale" content="sv_se">
   <meta property="og:type" content="website">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Objektorientering">
-  <meta name="twitter:description" content="The document hierarchy is unlimited. It also means that the menu levels is unlimited levels.
-The menu levels has up to 5 levels of indentation. After that there is no indentation.">
+  <meta name="twitter:description" content="Paradigmer Olika programmeringsspråk erbjuder olika lösningar för problem man kan stöta på som utvecklare. Dessa olika lösningar kallas för “programmeringsparadigmer”, man kan med lite annan formulering kalla det för programmeringsmetoder.
+Man tänker alltså på ett systematiskt vis omkring all sin programkod ungefär på samma vis. C# fokuserar på en typ av paradigm; Objektorientering.
+Andra möjliga varianter finns, och de har alla olika fördelar och nackdelar. Olika språk har olika stark koppling till dessa.">
 
   <meta itemprop="name" content="Objektorientering">
-  <meta itemprop="description" content="The document hierarchy is unlimited. It also means that the menu levels is unlimited levels.
-The menu levels has up to 5 levels of indentation. After that there is no indentation.">
-  <meta itemprop="datePublished" content="2023-08-27T23:26:15+00:00">
-  <meta itemprop="dateModified" content="2023-08-27T23:26:15+00:00">
-  <meta itemprop="wordCount" content="31"></head>
+  <meta itemprop="description" content="Paradigmer Olika programmeringsspråk erbjuder olika lösningar för problem man kan stöta på som utvecklare. Dessa olika lösningar kallas för “programmeringsparadigmer”, man kan med lite annan formulering kalla det för programmeringsmetoder.
+Man tänker alltså på ett systematiskt vis omkring all sin programkod ungefär på samma vis. C# fokuserar på en typ av paradigm; Objektorientering.
+Andra möjliga varianter finns, och de har alla olika fördelar och nackdelar. Olika språk har olika stark koppling till dessa.">
+  <meta itemprop="datePublished" content="2024-08-27T23:26:15+00:00">
+  <meta itemprop="dateModified" content="2024-08-27T23:26:15+00:00">
+  <meta itemprop="wordCount" content="1014"></head>
 <body>
 
 <div class="container"><header>
@@ -46,18 +49,136 @@ The menu levels has up to 5 levels of indentation. After that there is no indent
 
 
 <div class="content-container">
-<main><h1>Objektorientering</h1><!-- raw HTML omitted -->
-<p>The document hierarchy is unlimited.
-It also means that the menu levels is unlimited levels.</p>
-<p>The menu levels has up to 5 levels of indentation. After that there is no indentation.</p>
-<!-- raw HTML omitted -->
+<main><h1>Objektorientering</h1><h2 id="paradigmer">Paradigmer</h2>
+<p>Olika programmeringsspråk erbjuder olika lösningar för problem man kan stöta på som utvecklare. Dessa olika lösningar kallas för &ldquo;programmeringsparadigmer&rdquo;, man kan med lite annan formulering kalla det för programmeringsmetoder.</p>
+<p>Man tänker alltså på ett systematiskt vis omkring all sin programkod ungefär på samma vis. C# fokuserar på en typ av paradigm; Objektorientering.</p>
+<p>Andra möjliga varianter finns, och de har alla olika fördelar och nackdelar. Olika språk har olika stark koppling till dessa.
+Några exempel på andra paradigmer:</p>
+<ul>
+<li>Modulär programmering</li>
+<li>Proceduell programmering</li>
+<li>Strukturerad programmering</li>
+<li>Logikprogrammering</li>
+<li>Funktionell programmering</li>
+<li>Objektorienterad programmering</li>
+</ul>
+<h2 id="objektorienterad-programmering">Objektorienterad programmering</h2>
+<p>C# är i grund och botten helt orienterat omkring en paradigm som kallas för &ldquo;Objektorienterad programmering&rdquo;. Det innebär att all kod struktureras som objekt, och dessa objekt interagerar med varandra. Ett av syftena med en sådan stil är att göra den mindre abstrakt, och därav göra det lättare att strukturera sina instruktioner.</p>
+<p>Objekt har olika beståndsdelar, likt de man skulle koppla till objekt som man kan se.
+Som exempel kommer en bil att beskrivas.</p>
+<h3 id="egenskaper-attribut">Egenskaper (attribut)</h3>
+<p>Man beskriver vilka egenskaper bilen har, som utvecklare väljer man själv omfattningen på informationen som är relevant. I detta exempel så identifieras tre olika egenskaper:</p>
+<ul>
+<li>Märke - Beskriver vilket företag som tillverkar bilen</li>
+<li>Modell - Beskriver vilken typ av bil av företaget</li>
+<li>År - Beskriver året som bilen tillverkades</li>
+</ul>
+<p>Med dessa tre egenskaper (de kallas för attribut) hjälper oss då att kunna skapa flera olika typer av bilar med olika märken, modeller och årgångar.</p>
+<p>Precis som när man vanligtvis skapar en variabel i <strong>statiskt typade</strong> språk måste man beskriva vilken datatyp dessa attributen har. I bilexemplet så förvarar vi detta som två texter och ett datum.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> make;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> model;
+</span></span><span style="display:flex;"><span>DateTime productionYear;
+</span></span></code></pre></div><p>Något liknande såhär skulle då våra variabler se ut i vårt objekt &ldquo;Bil&rdquo;.</p>
+<h3 id="beteenden">Beteenden</h3>
+<p>Objekt i vår omvärld har också funktionalitet, en person kan prata, en dörr går att låsa och även bilar har funktionalitet. Dessa kallar man för beteenden, och i objektorienterat språk kallar man detta för <strong>medlemsmetoder</strong>, vilket är en vanlig metod men bundet till ett objekt och alla dess egenskaper och attribut.</p>
+<p>I exemplet av en bil så kommer denna bilen kunna startas och stoppas. Precis som när man skapar vanliga metoder så har de namn, en datatyp som resultat och kan också ta emot parametrar för att kunna köra.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Start() 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;Car is started&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Stop() 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;Car is stopped&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Koden ovan är två vanliga metoder som bara skriver att bilen har startat och stoppat. Ifall man vill använda de andra attributen så fungerar det lika bra.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> InspectCar()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Car is a &#34;</span> + make + <span style="color:#e6db74">&#34; of the model &#34;</span> + model + <span style="color:#e6db74">&#34;. It is produced year &#34;</span> + productionYear.ToString(<span style="color:#e6db74">&#34;yyyy&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Koden ovan tillverkar då en string som sedan skickas tillbaka till var man anropade metoden, och då formaterad med de attributen som man gett bilen.</p>
+<h3 id="definiera-objektet">Definiera objektet</h3>
+<p>Än så länge har det bara beskrivits <em>vad</em> ett objekt kan innehålla. För att faktiskt kunna skapa ett objekt så behöver man skapa en förklarning vad objektet ska innehålla, och vad denna <em>typ</em> av objekt ska kallas. Man skapar alltså en egen <em>typ</em>.</p>
+<p>Klassifiera kallas det man gör i ett sådant fall, och reflekteras i språket med nyckelordet <strong>class</strong>. Komplett kod för objektet bil som diskuterades tidigare blir som följande:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Car</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> make;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> model;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> DateTime productionYear;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Start() 
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#e6db74">&#34;Car is started.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Stop()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#e6db74">&#34;Car is stopped.&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Inspect()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Car is a &#34;</span> + make + <span style="color:#e6db74">&#34; of the model &#34;</span> + model + <span style="color:#e6db74">&#34;. It is produced year &#34;</span> + productionYear.ToString(<span style="color:#e6db74">&#34;yyyy&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="nedbrytning-av-termerna">Nedbrytning av termerna</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bil</span> { }
+</span></span></code></pre></div><p>Detta berättar för datorn att man vill göra en ny objekttyp, och att den ska kallas för bil. Allting som läggs inom kodblocket <code>{ }</code> blir då antingen en egenskap eller ett beteende för detta objekt.</p>
+<p>Det är alltså beskrivningen <em>av vad en bil är och vad den kan göra</em> och inte ett faktiskt objekt än.</p>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> make;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> model;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> DateTime productionYear;
+</span></span></code></pre></div><p>Detta berättar för datorn att typen <code>Car</code> har tre stycken attribut. Nyckelordet <code>public</code> framför själva typen för attributet är <strong>synligheten</strong> av attributet. <code>public</code> innebär då att den är synlig för alla som kan komma åt objektet.</p>
+<hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Start() 
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;Car is started.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Stop()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;Car is stopped.&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Inspect()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Car is a &#34;</span> + make + <span style="color:#e6db74">&#34; of the model &#34;</span> +  model + <span style="color:#e6db74">&#34;. It is produced year &#34;</span> + productionYear.ToString(<span style="color:#e6db74">&#34;yyyy&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Detta är tre olika metoder som bilen har, och man kan köra. De kan använda sig av attributen men behöver inte göra det. Likt attributen har också metoderna en synlighet, <code>public</code> innebär att alla kan komma åt och köra metoderna.</p>
+<h3 id="skapa-ett-objekt-av-en-typ">Skapa ett objekt av en typ</h3>
+<p>När man har skapat definitionen av ett objekt, och samtliga attribut och egenskaper så kan man skapa en <strong>instans</strong> av typen. Det är då ett &ldquo;fysiskt&rdquo; objekt som man kan fylla på med information eller köra metoderna. I ens kod skapar man ett objekt på följande vis.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Car vehicle = <span style="color:#66d9ef">new</span> Car();
+</span></span></code></pre></div><p>Som när man skapar en variabel av exempelvis <code>string</code>, <code>int</code> eller <code>double</code> så skriver man alltid enligt syntax <!-- raw HTML omitted -->datatyp<!-- raw HTML omitted --> <!-- raw HTML omitted -->variabelnamn<!-- raw HTML omitted -->;</p>
+<p>På samma vis när man har skapat sin egen typ gör man som med alla andra typer av variabler man skapar.</p>
+<h2 id="kom-åt-attributen-av-en-typ">Kom åt attributen av en typ</h2>
+<p>När man har skapat ett objekt så kan man också komma åt attributen av typen. Det gör man genom att använda sin variabel som är av typen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Car vehicle = <span style="color:#66d9ef">new</span> Car();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vehicle.make = <span style="color:#e6db74">&#34;Volvo&#34;</span>;
+</span></span><span style="display:flex;"><span>vehicle.model = <span style="color:#e6db74">&#34;XC90&#34;</span>;
+</span></span><span style="display:flex;"><span>vehicle.productionYear = <span style="color:#66d9ef">new</span> DateTime(<span style="color:#ae81ff">2024</span>);
+</span></span></code></pre></div><p>Nu skapas en variabel av den egenskapade typen <code>Car</code>. Denna typen har då alla attributen, vi kan komma åt dem och assignera dem. Så fort vi skickar vidare denna variabel så kommer alla attributen med. Samma gäller egenskaperna som finns i typen.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>Car vehicle = <span style="color:#66d9ef">new</span> Car();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vehicle.make = <span style="color:#e6db74">&#34;Volvo&#34;</span>;
+</span></span><span style="display:flex;"><span>vehicle.model = <span style="color:#e6db74">&#34;XC90&#34;</span>;
+</span></span><span style="display:flex;"><span>vehicle.productionYear = <span style="color:#66d9ef">new</span> DateTime(<span style="color:#ae81ff">2024</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>vehicle.Start();
+</span></span><span style="display:flex;"><span>vehicle.Stop();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(vehicle.Inspect());
+</span></span></code></pre></div><p>Förväntad utdata kan du se i bilden nedan.</p>
+<p><img src="oop_ex1.png" alt="alt"></p>
 <div class="edit-meta">
-Last updated on 27 Aug 2023
+Last updated on 27 Aug 2024
 
 
 <br>
-Published on 27 Aug 2023
-<br></div><nav class="pagination">
+Published on 27 Aug 2024
+<br></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:1313/programmering2/" title="Programmering 2"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Programmering 2</a>
+
 </nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
 </footer>
 </main>
@@ -66,6 +187,17 @@ Published on 27 Aug 2023
 <nav class="open-menu">
 <ul>
 <li class=""><a href="http://localhost:1313/">Home</a></li>
+
+<li class="parent"><a href="http://localhost:1313/programmering2/">Programmering 2</a>
+  
+<ul class="sub-menu">
+
+<li class=" active"><a href="http://localhost:1313/programmering2/objektorientering/">Objektorientering</a>
+  
+</li>
+</ul>
+  
+</li>
 </ul>
 </nav>
 

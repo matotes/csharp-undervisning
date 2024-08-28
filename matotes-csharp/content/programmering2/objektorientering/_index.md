@@ -159,3 +159,5 @@ vehicle.Stop();
 Console.WriteLine(vehicle.Inspect());
 ```
 Förväntad utdata kan du se i bilden nedan.
+
+![alt](oop_ex1.png)
