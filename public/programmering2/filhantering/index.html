@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Filhantering - Mathias C#-skola</title>
+<meta name="description" content="guide för nybörjaren inom C#">
+<meta name="generator" content="Hugo 0.133.1">
+<link href="http://localhost:1313//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="http://localhost:1313/programmering2/filhantering/">
+<link rel="stylesheet" href="http://localhost:1313/css/theme.min.css">
+<link rel="stylesheet" href="http://localhost:1313/css/chroma.min.css">
+<script defer src="http://localhost:1313//js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="http://localhost:1313/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:url" content="http://localhost:1313/programmering2/filhantering/">
+  <meta property="og:site_name" content="Mathias C#-skola">
+  <meta property="og:title" content="Filhantering">
+  <meta property="og:description" content="Att hantera filer är ett en typ av IO-process som ofta är nödvändig för en utvecklare. I vissa fall så är det att man vill ha kvar sin data efter programmet stängs av, så att man kan återställa det man arbetat med. Exempel på sådana program är Google Docs, Visual Studio, Unity men även spel behöver också både skriva och läsa från filer.
+I/O processer Mycket man gör vid utveckling av mjukvara är att man tar antingen emot input (data in) eller så ger man en output (data ut).">
+  <meta property="og:locale" content="sv_se">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Filhantering">
+  <meta name="twitter:description" content="Att hantera filer är ett en typ av IO-process som ofta är nödvändig för en utvecklare. I vissa fall så är det att man vill ha kvar sin data efter programmet stängs av, så att man kan återställa det man arbetat med. Exempel på sådana program är Google Docs, Visual Studio, Unity men även spel behöver också både skriva och läsa från filer.
+I/O processer Mycket man gör vid utveckling av mjukvara är att man tar antingen emot input (data in) eller så ger man en output (data ut).">
+
+  <meta itemprop="name" content="Filhantering">
+  <meta itemprop="description" content="Att hantera filer är ett en typ av IO-process som ofta är nödvändig för en utvecklare. I vissa fall så är det att man vill ha kvar sin data efter programmet stängs av, så att man kan återställa det man arbetat med. Exempel på sådana program är Google Docs, Visual Studio, Unity men även spel behöver också både skriva och läsa från filer.
+I/O processer Mycket man gör vid utveckling av mjukvara är att man tar antingen emot input (data in) eller så ger man en output (data ut).">
+  <meta itemprop="datePublished" content="2024-09-02T10:59:00+00:00">
+  <meta itemprop="dateModified" content="2024-09-02T10:59:00+00:00">
+  <meta itemprop="wordCount" content="211"></head>
+<body>
+
+<div class="container"><header>
+<h1>Mathias C#-skola</h1><span class="version">Version 0.0.1</span><a href="https://github.com/matotes/csharp-undervisning" class="github"><i class="fab fa-github"></i></a>
+<p class="description">guide för nybörjaren inom C#</p>
+
+</header>
+
+
+<div class="content-container">
+<main><h1>Filhantering</h1><p>Att hantera filer är ett en typ av IO-process som ofta är nödvändig för en utvecklare. I vissa fall så är det att man vill ha kvar sin data efter programmet stängs av, så att man kan återställa det man arbetat med. Exempel på sådana program är Google Docs, Visual Studio, Unity men även spel behöver också både skriva och läsa från filer.</p>
+<h2 id="io-processer">I/O processer</h2>
+<p>Mycket man gör vid utveckling av mjukvara är att man tar antingen emot input (data in) eller så ger man en output (data ut). IO i sig självt behöver inte innebära att det är den lokala användaren som direkt ser resultatet, utan det kan också vara en sak som inte syns utåt.</p>
+<p>Kommunikation mellan enheter (exempelvis två datorer i ett nätverk) kräver ocskå att man både skickar och tar emot data. Analoga detaljer är också en typ av IO-process. Att hantera muspekare och tangentbord är en IO-process, men att skriva ut på en skrivare är också en output.</p>
+<p>I C# så har du förmodligen kommit i kontakt med konsolfönstret/terminalen. Detta är en metod för användarinput och även att ge output till användaren.</p>
+<h2 id="operativsystem-os">Operativsystem (OS)</h2>
+<p>Operativsystem är ofta nycklen för de olika processerna som är tillgängliga och även möjliggör en att kommunicera med olika typer av IO-processer.</p>
+<div class="edit-meta">
+Last updated on 2 Sep 2024
+
+
+<br>
+Published on 2 Sep 2024
+<br></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:1313/programmering2/interaktionobjekt/" title="Interaktion mellan Objekt"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Interaktion mellan Objekt</a>
+<a class="nav nav-next" href="http://localhost:1313/programmering2/objektorientering/" title="Objektorientering">Next - Objektorientering <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="http://localhost:1313/">Home</a></li>
+
+<li class="parent"><a href="http://localhost:1313/programmering2/">Programmering 2</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="http://localhost:1313/programmering2/objektorientering/">Objektorientering</a>
+  
+</li>
+
+<li class=""><a href="http://localhost:1313/programmering2/interaktionobjekt/">Interaktion mellan Objekt</a>
+  
+</li>
+
+<li class=" active"><a href="http://localhost:1313/programmering2/filhantering/">Filhantering</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
