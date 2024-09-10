@@ -1,5 +1,5 @@
 ---
-title: "Filhantering"
+title: "Exempel 1 (Bankapplikation)"
 date: 2024-09-10T08:00:00Z
 draft: false
 weight: 100
