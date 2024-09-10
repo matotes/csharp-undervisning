@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Programmering 2 - Mathias C#-skola</title>
+<meta name="description" content="guide för nybörjaren inom C#">
+<meta name="generator" content="Hugo 0.133.1">
+<link href="http://localhost:1313//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="http://localhost:1313/programmering2/">
+<link rel="stylesheet" href="http://localhost:1313/css/theme.min.css">
+<link rel="stylesheet" href="http://localhost:1313/css/chroma.min.css">
+<script defer src="http://localhost:1313//js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="http://localhost:1313/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:url" content="http://localhost:1313/programmering2/">
+  <meta property="og:site_name" content="Mathias C#-skola">
+  <meta property="og:title" content="Programmering 2">
+  <meta property="og:description" content="Introduktion Denna sida är författad av Mathias Olausson, med syftet att ge ett typ av text-stöd som är tillgängligt och samtidigt uppdelat i olika sektioner. En större del är anpassat för gymnasieskola och undervisning i kursen Programmering 2 (SFS2010:2039).
+Kursen Programmering 2 Enligt Skolverket så finns där då olika delar av aspekter man måste komma i kontakt med. Bland annat är en av de stora områden paradigmer.
+I kursen kan man passa in dessa termer:">
+  <meta property="og:locale" content="sv_se">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Programmering 2">
+  <meta name="twitter:description" content="Introduktion Denna sida är författad av Mathias Olausson, med syftet att ge ett typ av text-stöd som är tillgängligt och samtidigt uppdelat i olika sektioner. En större del är anpassat för gymnasieskola och undervisning i kursen Programmering 2 (SFS2010:2039).
+Kursen Programmering 2 Enligt Skolverket så finns där då olika delar av aspekter man måste komma i kontakt med. Bland annat är en av de stora områden paradigmer.
+I kursen kan man passa in dessa termer:">
+
+  <meta itemprop="name" content="Programmering 2">
+  <meta itemprop="description" content="Introduktion Denna sida är författad av Mathias Olausson, med syftet att ge ett typ av text-stöd som är tillgängligt och samtidigt uppdelat i olika sektioner. En större del är anpassat för gymnasieskola och undervisning i kursen Programmering 2 (SFS2010:2039).
+Kursen Programmering 2 Enligt Skolverket så finns där då olika delar av aspekter man måste komma i kontakt med. Bland annat är en av de stora områden paradigmer.
+I kursen kan man passa in dessa termer:">
+  <meta itemprop="datePublished" content="2024-08-26T23:41:00+00:00">
+  <meta itemprop="dateModified" content="2024-08-26T23:41:00+00:00">
+  <meta itemprop="wordCount" content="191"></head>
+<body>
+
+<div class="container"><header>
+<h1>Mathias C#-skola</h1><span class="version">Version 0.0.1</span><a href="https://github.com/matotes/csharp-undervisning" class="github"><i class="fab fa-github"></i></a>
+<p class="description">guide för nybörjaren inom C#</p>
+
+</header>
+
+
+<div class="content-container">
+<main><h1>Programmering 2</h1><h2 id="introduktion">Introduktion</h2>
+<p>Denna sida är författad av Mathias Olausson, med syftet att ge ett typ av text-stöd som är tillgängligt och samtidigt uppdelat i olika sektioner. En större del är anpassat för gymnasieskola och undervisning i kursen Programmering 2 (SFS2010:2039).</p>
+<h2 id="kursen-programmering-2">Kursen Programmering 2</h2>
+<p>Enligt Skolverket så finns där då olika delar av aspekter man måste komma i kontakt med. Bland annat är en av de stora områden <strong>paradigmer</strong>.</p>
+<p>I kursen kan man passa in dessa termer:</p>
+<ul>
+<li>Objektorientering</li>
+<li>Polymorfism</li>
+<li>Filläsning och -skrivning</li>
+<li>Databaser</li>
+<li>Strukturer</li>
+<li>Algoritmer</li>
+<li>Standarder</li>
+<li>Felsökning</li>
+<li>Problemlösning</li>
+</ul>
+<p>En hel del av dessa kan ha en viss relation mellan varandra, och blir byggstenar för ens eget förståelse för ämnet programmering i stort. Ett krav är också att det sker i <em>minst</em> ett skriftligt språk. Utgångspunkten i denna sida är endast skriftlig och i språket Visual C#.</p>
+<h2 id="alternativ">Alternativ</h2>
+<p>Det finns många alternativ, freecodecamp har många olika kurser och steg-för-steg att få en mer bitvis portionerad lärupplevelse.</p>
+<p>Många koncecpt som beskrivs är gemensamma för en <strong>datavetenskaplig kärna</strong>, det innebär att en del termer är inte unika för bara C# - utan går att applicera brett inom ämnet. Vissa begrepp är även gemensamma för flera discipliner.</p>
+<div class="edit-meta">
+Last updated on 26 Aug 2024
+
+
+<br>
+Published on 26 Aug 2024
+<br></div><nav class="pagination"><a class="nav nav-prev" href="http://localhost:1313/" title="Startsida"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Startsida</a>
+<a class="nav nav-next" href="http://localhost:1313/programmering2/objektorientering/" title="Objektorientering">Next - Objektorientering <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="http://localhost:1313/">Home</a></li>
+
+<li class=" active"><a href="http://localhost:1313/programmering2/">Programmering 2</a>
+  
+<ul class="sub-menu">
+
+<li class=""><a href="http://localhost:1313/programmering2/objektorientering/">Objektorientering</a>
+  
+</li>
+
+<li class=""><a href="http://localhost:1313/programmering2/interaktionobjekt/">Interaktion mellan Objekt</a>
+  
+</li>
+
+<li class=""><a href="http://localhost:1313/programmering2/filhantering/">Filhantering</a>
+  
+</li>
+</ul>
+  
+</li>
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
