@@ -1,6 +1,6 @@
 ---
 title: "Filhantering"
-date: 2024-09-10T12:00:00Z
+date: 2024-09-10T08:00:00Z
 draft: false
 weight: 100
 ---
